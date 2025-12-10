@@ -59,7 +59,7 @@ export const translations = {
     // Pricing
     'pricing.title': 'Transparent',
     'pricing.highlight': 'Pricing',
-    'pricing.subtitle': 'Choose the perfect package for your needs. All prices in USD.',
+    'pricing.subtitle': 'Choose the perfect package for your needs. Payment is in KRW. USD is approx.',
     'pricing.plan1.name': 'Airport Transfer',
     'pricing.plan1.note': 'Starting from',
     'pricing.plan1.feature1': 'Meet & Greet Service',
@@ -188,7 +188,7 @@ export const translations = {
     // Pricing
     'pricing.title': '투명한',
     'pricing.highlight': '가격',
-    'pricing.subtitle': '필요에 맞는 완벽한 패키지를 선택하세요. 모든 가격은 USD입니다.',
+    'pricing.subtitle': '필요에 맞는 완벽한 패키지를 선택하세요. 결제는 원화, 달러는 예상치입니다.',
     'pricing.plan1.name': '공항 픽업/샌딩',
     'pricing.plan1.note': '시작 가격',
     'pricing.plan1.feature1': '미트 & 그리트 서비스',
@@ -317,7 +317,7 @@ export const translations = {
     // Pricing
     'pricing.title': '透明な',
     'pricing.highlight': '価格',
-    'pricing.subtitle': 'ニーズに合った完璧なパッケージをお選びください。すべての価格はUSDです。',
+    'pricing.subtitle': 'ニーズに合った完璧なパッケージをお選びください。お支払いはKRW、USDは目安です。',
     'pricing.plan1.name': '空港送迎',
     'pricing.plan1.note': '開始価格',
     'pricing.plan1.feature1': 'ミート＆グリートサービス',
@@ -446,7 +446,7 @@ export const translations = {
     // Pricing
     'pricing.title': '透明',
     'pricing.highlight': '定价',
-    'pricing.subtitle': '选择适合您需求的完美套餐。所有价格以美元计。',
+    'pricing.subtitle': '选择适合您需求的完美套餐。支付以韩元为准，美元仅供参考。',
     'pricing.plan1.name': '机场接送',
     'pricing.plan1.note': '起价',
     'pricing.plan1.feature1': '迎接和问候服务',
@@ -575,7 +575,7 @@ export const translations = {
     // Pricing
     'pricing.title': 'โปร่งใส',
     'pricing.highlight': 'ราคา',
-    'pricing.subtitle': 'เลือกแพ็คเกจที่สมบูรณ์แบบสำหรับความต้องการของคุณ ราคาทั้งหมดเป็นดอลลาร์สหรัฐ',
+    'pricing.subtitle': 'เลือกแพ็คเกจที่สมบูรณ์แบบสำหรับความต้องการของคุณ ชำระเงินเป็นวอนเกาหลี ดอลลาร์เป็นราคาโดยประมาณ',
     'pricing.plan1.name': 'รับส่งสนามบิน',
     'pricing.plan1.note': 'เริ่มต้นที่',
     'pricing.plan1.feature1': 'บริการต้อนรับ',
