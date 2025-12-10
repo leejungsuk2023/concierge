@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
 
 export function FloatingChatButton() {
-  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const chatOptions = [
@@ -15,7 +13,7 @@ export function FloatingChatButton() {
         </svg>
       ),
       color: 'bg-[#25D366]',
-      link: 'https://wa.me/821012345678'
+      link: 'https://wa.me/821089175327'
     },
     {
       name: 'LINE',
@@ -43,55 +41,64 @@ export function FloatingChatButton() {
   return (
     <>
       {/* Chat Options - Appear when open */}
-      <div
-        className={`fixed z-50 flex flex-col gap-3 transition-all duration-300 ${
-          isOpen
-            ? 'opacity-100 pointer-events-auto'
-            : 'opacity-0 pointer-events-none'
-        }`}
-        style={{ bottom: '100px', left: '50%', transform: 'translateX(-50%)' }}
-      >
-        {chatOptions.map((option, index) => (
-          <a
-            key={index}
-            href={option.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`w-14 h-14 rounded-full ${option.color} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
-              option.textColor || 'text-white'
-            }`}
-            style={{
-              transitionDelay: isOpen ? `${index * 50}ms` : '0ms'
-            }}
-          >
-            {option.icon}
-          </a>
-        ))}
-      </div>
+      {isOpen && (
+        <div className="fixed bottom-28 right-6 sm:right-8 z-50 flex flex-col gap-3">
+          {chatOptions.map((option, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-end gap-3 group animate-in fade-in slide-in-from-bottom-4"
+              style={{
+                animationDelay: `${index * 50}ms`,
+                animationDuration: '300ms',
+                animationFillMode: 'both'
+              }}
+            >
+              {/* Label */}
+              <div className="bg-white px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                <span className={`font-semibold whitespace-nowrap ${option.textColor || 'text-gray-800'}`}>
+                  {option.name}
+                </span>
+              </div>
 
-      {/* Main Toggle Button */}
+              {/* Icon Button */}
+              <a
+                href={option.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-14 h-14 rounded-full ${option.color} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
+                  option.textColor || 'text-white'
+                }`}
+              >
+                {option.icon}
+              </a>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Main Toggle Button - Fixed to bottom right */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-8 z-50 w-16 h-16 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
+        className={`fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 w-16 h-16 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
           isOpen
             ? 'bg-gray-600 hover:bg-gray-700 rotate-180'
             : 'bg-[#D4AF37] hover:bg-[#C19F2F]'
         }`}
-        style={{ left: '50%', transform: 'translateX(-50%)' }}
+        style={{ position: 'fixed' }}
         aria-label="Toggle chat options"
       >
         {/* Pulse Animation Ring - Only when closed */}
         {!isOpen && (
-          <div className="absolute inset-0 w-16 h-16 rounded-full bg-[#D4AF37] animate-ping opacity-10 pointer-events-none"></div>
+          <div className="absolute inset-0 w-16 h-16 rounded-full bg-[#D4AF37] animate-ping opacity-10"></div>
         )}
-
+        
         {isOpen ? (
           <X className="w-7 h-7 text-white" />
         ) : (
           <>
             <MessageCircle className="w-7 h-7 text-[#051937]" />
             {/* Notification Badge */}
-            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-white flex items-center justify-center text-xs">
               3
             </span>
           </>

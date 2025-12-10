@@ -7,7 +7,8 @@ export function PricingTable() {
   const pricingPlans = [
     {
       name: t('pricing.plan1.name'),
-      price: '$120',
+      priceKRW: '₩100,000',
+      priceUSD: '$75',
       priceNote: t('pricing.plan1.note'),
       features: [
         t('pricing.plan1.feature1'),
@@ -20,7 +21,8 @@ export function PricingTable() {
     },
     {
       name: t('pricing.plan2.name'),
-      price: '$250',
+      priceKRW: '₩200,000',
+      priceUSD: '$150',
       priceNote: t('pricing.plan2.note'),
       features: [
         t('pricing.plan2.feature1'),
@@ -33,7 +35,8 @@ export function PricingTable() {
     },
     {
       name: t('pricing.plan3.name'),
-      price: '$450',
+      priceKRW: '₩350,000',
+      priceUSD: '$270',
       priceNote: t('pricing.plan3.note'),
       features: [
         t('pricing.plan3.feature1'),
@@ -89,9 +92,14 @@ export function PricingTable() {
                 <div className="mb-6 sm:mb-8">
                   <div className="flex items-baseline gap-2">
                     <span className="text-4xl sm:text-5xl font-bold text-[#D4AF37]">
-                      {plan.price}
+                      {plan.priceKRW}
                     </span>
-                    <span className="text-white/60">~</span>
+                  </div>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className="text-lg sm:text-xl text-white/60">
+                      {plan.priceUSD}
+                    </span>
+                    <span className="text-sm text-white/50">~</span>
                   </div>
                   <p className="text-sm sm:text-base text-white/70 mt-2">
                     {plan.priceNote}

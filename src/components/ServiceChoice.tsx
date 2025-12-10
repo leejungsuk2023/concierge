@@ -1,5 +1,7 @@
 import { Heart, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import medicalImage from 'figma:asset/0bf8ecfec237db18cb001cde30d315e85ba7c5bc.png';
+import tourImage from 'figma:asset/0e80666b8fa5a4b3e8ee7cd8e4ab7e81da2ddf9a.png';
 
 export function ServiceChoice() {
   const { t } = useLanguage();
@@ -38,7 +40,7 @@ export function ServiceChoice() {
             {/* Image */}
             <div className="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1584515933487-779824d29309?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwcGF0aWVudCUyMGNhcmUlMjBjb21mb3J0fGVufDF8fHx8MTc2NTM0MDIwMnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src={medicalImage}
                 alt="Medical Care & Recovery"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -80,7 +82,7 @@ export function ServiceChoice() {
             {/* Image */}
             <div className="relative h-64 sm:h-72 lg:h-80 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1626687843236-c8d19bdf56ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGZhbWlseSUyMHZhY2F0aW9uJTIwbHV4dXJ5fGVufDF8fHx8MTc2NTM0MDIwMnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src={tourImage}
                 alt="VVIP Private Tour"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />

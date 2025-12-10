@@ -1,5 +1,6 @@
 import { Tv, Wifi, Eye, Luggage, Armchair } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import vehicleInterior from 'figma:asset/24f2f9ede501f954a06f56b3803186f4157e8211.png';
 
 export function VehicleShowcase() {
   const { t } = useLanguage();
@@ -51,7 +52,7 @@ export function VehicleShowcase() {
           <div className="relative group order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1741088088676-45ea7f7aafbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXIlMjBpbnRlcmlvciUyMHNlYXRzfGVufDF8fHx8MTc2NTM0MDIwMnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src={vehicleInterior}
                 alt="Kia Carnival Hi-Limousine Interior"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
