@@ -1,27 +1,10 @@
-import { MessageCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[#051937]">
-        {/* Decorative Pattern */}
-        <div className="absolute inset-0" style={{ opacity: 0.15 }}>
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="heroPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-                <path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="#D4AF37" strokeWidth="1"/>
-                <circle cx="30" cy="30" r="3" fill="#D4AF37"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#heroPattern)"/>
-          </svg>
-        </div>
-      </div>
-
+    <section className="relative w-full bg-[#051937]" style={{ height: 'calc(100vh - 120px)' }}>
       {/* Background Video */}
       <div className="absolute inset-0">
         <video
@@ -38,10 +21,10 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8">
+      <div className="relative z-10 h-full flex flex-col justify-start items-center text-center px-4 sm:px-6 lg:px-8" style={{ paddingTop: '80px' }}>
+        <div className="max-w-5xl mx-auto space-y-4 sm:space-y-6">
           {/* Logo/Brand Name */}
-          <div className="mb-4 sm:mb-6">
+          <div className="mb-2 sm:mb-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
               {t('hero.title')}
             </h1>
@@ -81,14 +64,6 @@ export function HeroSection() {
               <span className="text-sm sm:text-base">{t('hero.badge3')}</span>
             </div>
           </div>
-
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce hidden sm:block">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
         </div>
       </div>
     </section>
