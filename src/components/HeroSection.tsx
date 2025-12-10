@@ -6,15 +6,19 @@ export function HeroSection() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1631730666263-37c41034d5ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBibGFjayUyMGxpbW91c2luZSUyMHZhbnxlbnwxfHx8fDE3NjUzNDAyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="K-VVIP Limousine Service"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-[#051937]/70"></div>
+        <div className="absolute inset-0 bg-[#051937]/60"></div>
       </div>
 
       {/* Content */}
