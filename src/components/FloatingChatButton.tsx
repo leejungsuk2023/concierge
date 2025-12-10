@@ -41,7 +41,7 @@ export function FloatingChatButton() {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-8 right-8 z-50">
       {/* Chat Options - Appear when open */}
       <div
         className={`flex flex-col gap-3 mb-4 transition-all duration-300 ${
