@@ -41,60 +41,50 @@ export function FloatingChatButton() {
   ];
 
   return (
-    <div className="fixed bottom-8 z-50" style={{ left: '50%', transform: 'translateX(-50%)' }}>
+    <>
       {/* Chat Options - Appear when open */}
       <div
-        className={`flex flex-col gap-3 mb-4 transition-all duration-300 ${
+        className={`fixed z-50 flex flex-col gap-3 transition-all duration-300 ${
           isOpen
-            ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-0 translate-y-4 pointer-events-none'
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
+        style={{ bottom: '100px', left: '50%', transform: 'translateX(-50%)' }}
       >
         {chatOptions.map((option, index) => (
-          <div
+          <a
             key={index}
-            className="flex items-center justify-end gap-3 group"
+            href={option.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`w-14 h-14 rounded-full ${option.color} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
+              option.textColor || 'text-white'
+            }`}
             style={{
               transitionDelay: isOpen ? `${index * 50}ms` : '0ms'
             }}
           >
-            {/* Label */}
-            <div className="bg-white px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-              <span className={`font-semibold whitespace-nowrap ${option.textColor || 'text-gray-800'}`}>
-                {option.name}
-              </span>
-            </div>
-
-            {/* Icon Button */}
-            <a
-              href={option.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`w-14 h-14 rounded-full ${option.color} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
-                option.textColor || 'text-white'
-              }`}
-            >
-              {option.icon}
-            </a>
-          </div>
+            {option.icon}
+          </a>
         ))}
       </div>
 
       {/* Main Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-16 h-16 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center relative ${
+        className={`fixed bottom-8 z-50 w-16 h-16 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
           isOpen
             ? 'bg-gray-600 hover:bg-gray-700 rotate-180'
             : 'bg-[#D4AF37] hover:bg-[#C19F2F]'
         }`}
+        style={{ left: '50%', transform: 'translateX(-50%)' }}
         aria-label="Toggle chat options"
       >
         {/* Pulse Animation Ring - Only when closed */}
         {!isOpen && (
           <div className="absolute inset-0 w-16 h-16 rounded-full bg-[#D4AF37] animate-ping opacity-10 pointer-events-none"></div>
         )}
-        
+
         {isOpen ? (
           <X className="w-7 h-7 text-white" />
         ) : (
@@ -107,7 +97,6 @@ export function FloatingChatButton() {
           </>
         )}
       </button>
-
-    </div>
+    </>
   );
 }
