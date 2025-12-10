@@ -4,9 +4,9 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative w-full bg-[#051937]" style={{ height: 'calc(100vh - 120px)' }}>
-      {/* Background Video */}
-      <div className="absolute inset-0">
+    <section className="relative w-full h-screen bg-[#051937]">
+      {/* Background Video - ends above floating button */}
+      <div className="absolute top-0 left-0 right-0" style={{ height: 'calc(100% - 100px)' }}>
         <video
           autoPlay
           muted
