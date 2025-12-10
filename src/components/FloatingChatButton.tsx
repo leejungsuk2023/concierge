@@ -41,7 +41,7 @@ export function FloatingChatButton() {
   ];
 
   return (
-    <div className="fixed bottom-8 right-8 z-50">
+    <div className="fixed bottom-6 right-6 z-50">
       {/* Chat Options - Appear when open */}
       <div
         className={`flex flex-col gap-3 mb-4 transition-all duration-300 ${
@@ -108,12 +108,6 @@ export function FloatingChatButton() {
         )}
       </button>
 
-      {/* Label "문의하기" */}
-      {!isOpen && (
-        <div className="absolute right-20 top-1/2 -translate-y-1/2 bg-[#D4AF37] text-[#051937] px-4 py-2 rounded-lg font-semibold text-sm whitespace-nowrap shadow-lg pointer-events-none">
-          {t('chat.inquiry')}
-        </div>
-      )}
     </div>
   );
 }
