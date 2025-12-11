@@ -1,6 +1,7 @@
 import { HeroSection } from './components/HeroSection';
 import { ServiceChoice } from './components/ServiceChoice';
 import { VehicleShowcase } from './components/VehicleShowcase';
+import { VIPPerks } from './components/VIPPerks';
 import { PricingTable } from './components/PricingTable';
 import { SocialProof } from './components/SocialProof';
 import { Footer } from './components/Footer';
@@ -25,6 +26,9 @@ export default function App() {
 
         {/* Vehicle Showcase Section */}
         <VehicleShowcase />
+
+        {/* VIP Perks Section */}
+        <VIPPerks />
 
         {/* Pricing Table Section */}
         <PricingTable />

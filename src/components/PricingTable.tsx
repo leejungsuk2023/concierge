@@ -7,8 +7,8 @@ export function PricingTable() {
   const pricingPlans = [
     {
       name: t('pricing.plan1.name'),
-      priceKRW: '₩100,000',
-      priceUSD: '$75',
+      priceKRW: '₩130,000',
+      priceUSD: '$95',
       priceNote: t('pricing.plan1.note'),
       features: [
         t('pricing.plan1.feature1'),
@@ -21,8 +21,8 @@ export function PricingTable() {
     },
     {
       name: t('pricing.plan2.name'),
-      priceKRW: '₩200,000',
-      priceUSD: '$150',
+      priceKRW: '₩290,000',
+      priceUSD: '$220',
       priceNote: t('pricing.plan2.note'),
       features: [
         t('pricing.plan2.feature1'),
@@ -35,8 +35,8 @@ export function PricingTable() {
     },
     {
       name: t('pricing.plan3.name'),
-      priceKRW: '₩350,000',
-      priceUSD: '$270',
+      priceKRW: '₩480,000',
+      priceUSD: '$360',
       priceNote: t('pricing.plan3.note'),
       features: [
         t('pricing.plan3.feature1'),

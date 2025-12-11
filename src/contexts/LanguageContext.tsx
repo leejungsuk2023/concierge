@@ -59,7 +59,7 @@ export const translations = {
     // Pricing
     'pricing.title': 'Transparent',
     'pricing.highlight': 'Pricing',
-    'pricing.subtitle': 'Choose the perfect package for your needs. Payment is in KRW. USD is approx.',
+    'pricing.subtitle': 'Choose the perfect package for your needs. All prices in USD.',
     'pricing.plan1.name': 'Airport Transfer',
     'pricing.plan1.note': 'Starting from',
     'pricing.plan1.feature1': 'Meet & Greet Service',
@@ -138,7 +138,17 @@ export const translations = {
     'footer.cookies': 'Cookie Policy',
 
     // Floating Chat
-    'chat.inquiry': 'Inquiry'
+    'chat.inquiry': 'Inquiry',
+
+    // VIP Perks
+    'vip.title': 'Only for Our VIP Guests',
+    'vip.subtitle': 'Experience Korea beyond just transportation',
+    'vip.perk1.title': 'Recovery Kit',
+    'vip.perk1.description': 'Free welcome recovery kit including anti-swelling tea, cooling eye mask, and more',
+    'vip.perk2.title': 'No-Wait Dining',
+    'vip.perk2.description': 'Skip the line at famous restaurants - we handle reservations (Ganjang Gejang, Korean BBQ Omakase)',
+    'vip.perk3.title': 'Free Botox & Skin Laser',
+    'vip.perk3.description': 'Complimentary treatment at Seoul\'s top clinics - one free procedure per person'
   },
   ko: {
     // Hero Section
@@ -188,7 +198,7 @@ export const translations = {
     // Pricing
     'pricing.title': '투명한',
     'pricing.highlight': '가격',
-    'pricing.subtitle': '필요에 맞는 완벽한 패키지를 선택하세요. 결제는 원화, 달러는 예상치입니다.',
+    'pricing.subtitle': '필요에 맞는 완벽한 패키지를 선택하세요. 모든 가격은 USD입니다.',
     'pricing.plan1.name': '공항 픽업/샌딩',
     'pricing.plan1.note': '시작 가격',
     'pricing.plan1.feature1': '미트 & 그리트 서비스',
@@ -267,7 +277,17 @@ export const translations = {
     'footer.cookies': '쿠키 정책',
 
     // Floating Chat
-    'chat.inquiry': '문의하기'
+    'chat.inquiry': '문의하기',
+
+    // VIP Perks
+    'vip.title': '우리 VIP 손님만을 위한 혜택',
+    'vip.subtitle': '교통만이 아닌 한국을 경험하세요',
+    'vip.perk1.title': '회복 키트',
+    'vip.perk1.description': '붓기차, 쿨링 안대 등 웰컴 회복 키트 무료 제공',
+    'vip.perk2.title': '대기 없는 식사',
+    'vip.perk2.description': '유명 맛집 웨이팅/예약 대행 (간장게장, 한우 오마카세)',
+    'vip.perk3.title': '보톡스, 스킨레이저 무료제공',
+    'vip.perk3.description': '서울에서 가장 잘 하는 병원에서 1인 무료 시술 제공'
   },
   ja: {
     // Hero Section
@@ -317,7 +337,7 @@ export const translations = {
     // Pricing
     'pricing.title': '透明な',
     'pricing.highlight': '価格',
-    'pricing.subtitle': 'ニーズに合った完璧なパッケージをお選びください。お支払いはKRW、USDは目安です。',
+    'pricing.subtitle': 'ニーズに合った完璧なパッケージをお選びください。すべての価格はUSDです。',
     'pricing.plan1.name': '空港送迎',
     'pricing.plan1.note': '開始価格',
     'pricing.plan1.feature1': 'ミート＆グリートサービス',
@@ -396,7 +416,17 @@ export const translations = {
     'footer.cookies': 'クッキーポリシー',
 
     // Floating Chat
-    'chat.inquiry': 'お問い合わせ'
+    'chat.inquiry': 'お問い合わせ',
+
+    // VIP Perks
+    'vip.title': '私たちのVIPゲストのみの特典',
+    'vip.subtitle': '輸送だけではなく、韓国を体験してください',
+    'vip.perk1.title': '回復キット',
+    'vip.perk1.description': '腫れ止めティーや冷却マスクなど、回復キットを無料で提供します',
+    'vip.perk2.title': '待ち時間なしのダイニング',
+    'vip.perk2.description': '有名レストランで待ち時間を省きます - 私たちが予約を手伝います (ガンジャンゲジャング、韓国 BBQ オマカゼ)',
+    'vip.perk3.title': '無料ボトックス & スキンレーザー',
+    'vip.perk3.description': 'ソウルのトップクリニックで無料で提供される治療 - 1人あたり1回無料手順'
   },
   zh: {
     // Hero Section
@@ -446,7 +476,7 @@ export const translations = {
     // Pricing
     'pricing.title': '透明',
     'pricing.highlight': '定价',
-    'pricing.subtitle': '选择适合您需求的完美套餐。支付以韩元为准，美元仅供参考。',
+    'pricing.subtitle': '选择适合您需求的完美套餐。所有价格以美元计。',
     'pricing.plan1.name': '机场接送',
     'pricing.plan1.note': '起价',
     'pricing.plan1.feature1': '迎接和问候服务',
@@ -525,7 +555,17 @@ export const translations = {
     'footer.cookies': 'Cookie政策',
 
     // Floating Chat
-    'chat.inquiry': '咨询'
+    'chat.inquiry': '咨询',
+
+    // VIP Perks
+    'vip.title': '仅限我们的VIP客人',
+    'vip.subtitle': '体验韩国不仅仅是交通',
+    'vip.perk1.title': '恢复包',
+    'vip.perk1.description': '免费提供欢迎恢复包，包括消肿茶、冷却眼罩等',
+    'vip.perk2.title': '无需等待用餐',
+    'vip.perk2.description': '跳过著名餐厅的排队 - 我们会处理预订（甘酱蟹、韩国烧烤套餐）',
+    'vip.perk3.title': '免费保妥克斯 & 皮肤激光',
+    'vip.perk3.description': '首尔顶级诊所提供的免费治疗 - 每人一次免费疗程'
   },
   th: {
     // Hero Section
@@ -561,7 +601,7 @@ export const translations = {
     'vehicle.name': 'เกีย คาร์นิวัล ไฮลิมูซีน',
     'vehicle.subtitle': 'สัมผัสความหรูหราที่ไม่มีใครเทียบได้กับรถ VIP ชั้นนำของเกาหลี',
     'vehicle.feature1.title': 'ที่นั่งเอนได้แบบ VIP Ottoman',
-    'vehicle.feature1.description': 'ความสะดวกสบายชั้นหนึ่งพร้อมที่นั่งหรูหราปรับได��',
+    'vehicle.feature1.description': 'ความสะดวกสบายชั้นหนึ่งพร้อมที่นั่งหรูหราปรับได',
     'vehicle.feature2.title': 'ทีวีความบันเทิง 27 นิ้ว',
     'vehicle.feature2.description': 'ระบบความบันเทิงในรถระดับพรีเมียม',
     'vehicle.feature3.title': 'Wi-Fi ฟรี',
@@ -575,7 +615,7 @@ export const translations = {
     // Pricing
     'pricing.title': 'โปร่งใส',
     'pricing.highlight': 'ราคา',
-    'pricing.subtitle': 'เลือกแพ็คเกจที่สมบูรณ์แบบสำหรับความต้องการของคุณ ชำระเงินเป็นวอนเกาหลี ดอลลาร์เป็นราคาโดยประมาณ',
+    'pricing.subtitle': 'เลือกแพ็คเกจที่สมบูรณ์แบบสำหรับความต้องการของคุณ ราคาทั้งหมดเป็นดอลลาร์สหรัฐ',
     'pricing.plan1.name': 'รับส่งสนามบิน',
     'pricing.plan1.note': 'เริ่มต้นที่',
     'pricing.plan1.feature1': 'บริการต้อนรับ',
@@ -654,7 +694,17 @@ export const translations = {
     'footer.cookies': 'นโยบายคุกกี้',
 
     // Floating Chat
-    'chat.inquiry': 'สอบถาม'
+    'chat.inquiry': 'สอบถาม',
+
+    // VIP Perks
+    'vip.title': 'เฉพาะสำหรับลูกค้า VIP ของเรา',
+    'vip.subtitle': 'สัมผัสประสบการณ์ที่มากกว่าการขนส่งในเกาหลี',
+    'vip.perk1.title': 'ชุดฟื้นตัว',
+    'vip.perk1.description': 'ชุดฟื้นตัวฟรีที่รวมถึงชาลดน้ำบวม, หน้ากากเย็น, และอื่นๆ',
+    'vip.perk2.title': 'ทานอาหารโดยไม่ต้องรอคอย',
+    'vip.perk2.description': 'ข้ามคิวที่ร้านอาหารชื่อดัง - เราจะจัดการการจอง (ганจังเกจัง, BBQ โอมาคาซี)',
+    'vip.perk3.title': 'บอโทกซ์, สกินเรย์เซอร์ฟรี',
+    'vip.perk3.description': 'รับบริการฟรีจากคลินิกที่ดีที่สุดในเซาโล่ - 1การรักษาฟรีต่อคน'
   }
 };
 
