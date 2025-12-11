@@ -1,6 +1,39 @@
 import { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 
+// Function to get cookie value
+function getCookie(name: string): string | null {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(';').shift() || null;
+  return null;
+}
+
+// Function to track chat click events via Meta CAPI
+async function trackChatClick(platform: string) {
+  try {
+    const eventName = `${platform}_Click`;
+    const fbc = getCookie('_fbc');
+    const fbp = getCookie('_fbp');
+
+    await fetch('/api/lead', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        event_name: eventName,
+        event_source_url: window.location.href,
+        client_user_agent: navigator.userAgent,
+        fbc: fbc,
+        fbp: fbp,
+      }),
+    });
+  } catch (error) {
+    console.error('CAPI tracking error:', error);
+  }
+}
+
 export function FloatingChatButton() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -65,6 +98,7 @@ export function FloatingChatButton() {
                 href={option.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackChatClick(option.name)}
                 className={`w-14 h-14 rounded-full ${option.color} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center ${
                   option.textColor || 'text-white'
                 }`}
