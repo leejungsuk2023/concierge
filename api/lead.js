@@ -1,10 +1,39 @@
-const crypto = require('crypto');
+const https = require('https');
 
 const PIXEL_ID = '1162277242762875';
 const ACCESS_TOKEN = 'EAAQmKoiUWaMBQPNKla2mzq1w3Ca1UTZBGd0jFu3JB1J2aE4PE2wuIuOII9y8L0B7S1qtZAwHEFZCHtmkWFUYyueWAy8RTo5dsYANZAkXIIq9p5mxMZAZCeDxvuZATG2QpxdX18RlMbz79GOLr40CcuV6B1jgdZC0qmZCvUFJIzL4DseC8DDzfZBKznVJIT4dIvqE0nCgZDZD';
 
-function sha256Lower(s) {
-  return crypto.createHash('sha256').update((s || '').trim().toLowerCase()).digest('hex');
+function httpsPost(url, data) {
+  return new Promise((resolve, reject) => {
+    const urlObj = new URL(url);
+    const postData = JSON.stringify(data);
+
+    const options = {
+      hostname: urlObj.hostname,
+      path: urlObj.pathname + urlObj.search,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(postData),
+      },
+    };
+
+    const req = https.request(options, (res) => {
+      let body = '';
+      res.on('data', (chunk) => body += chunk);
+      res.on('end', () => {
+        try {
+          resolve({ ok: res.statusCode >= 200 && res.statusCode < 300, status: res.statusCode, json: JSON.parse(body) });
+        } catch (e) {
+          resolve({ ok: false, status: res.statusCode, json: { error: body } });
+        }
+      });
+    });
+
+    req.on('error', reject);
+    req.write(postData);
+    req.end();
+  });
 }
 
 module.exports = async (req, res) => {
@@ -62,22 +91,14 @@ module.exports = async (req, res) => {
 
     const url = `https://graph.facebook.com/v19.0/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`;
 
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(eventData),
-    });
-
-    const result = await response.json();
+    const response = await httpsPost(url, eventData);
 
     if (!response.ok) {
-      console.error('Meta CAPI Error:', result);
-      return res.status(response.status).json({ error: result });
+      console.error('Meta CAPI Error:', response.json);
+      return res.status(response.status).json({ error: response.json });
     }
 
-    return res.status(200).json({ success: true, result, event_id: eventId });
+    return res.status(200).json({ success: true, result: response.json, event_id: eventId });
   } catch (error) {
     console.error('CAPI Error:', error);
     return res.status(500).json({ error: error.message });
