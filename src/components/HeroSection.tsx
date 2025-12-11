@@ -1,4 +1,3 @@
-import { MessageCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function HeroSection() {
@@ -6,18 +5,21 @@ export function HeroSection() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background YouTube Video */}
+      {/* Background Video */}
       <div className="absolute inset-0 bg-black">
-        <iframe
-          src="https://www.youtube.com/embed/ep5cXyRNi_o?autoplay=1&mute=1&loop=1&playlist=ep5cXyRNi_o&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full md:w-auto md:h-full md:aspect-[9/16]"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          style={{
-            border: 'none',
-            pointerEvents: 'none',
+        <video
+          autoPlay
+          muted
+          playsInline
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover"
+          onEnded={(e) => {
+            // 영상 끝나면 마지막 프레임에서 정지
+            const video = e.currentTarget;
+            video.currentTime = video.duration;
           }}
-        />
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-[#051937]/70"></div>
       </div>
