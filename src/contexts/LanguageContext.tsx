@@ -145,10 +145,10 @@ export const translations = {
     'vip.subtitle': 'Experience Korea beyond just transportation',
     'vip.perk1.title': 'Recovery Kit',
     'vip.perk1.description': 'Free welcome recovery kit including anti-swelling tea, cooling eye mask, and more',
-    'vip.perk2.title': 'No-Wait Dining',
-    'vip.perk2.description': 'Skip the line at famous restaurants - we handle reservations (Ganjang Gejang, Korean BBQ Omakase)',
+    'vip.perk2.title': 'Local\'s Secret Restaurants',
+    'vip.perk2.description': 'Exclusive access to hidden local favorites that tourists never find - authentic Korean dining experiences',
     'vip.perk3.title': 'Free Botox & Skin Laser',
-    'vip.perk3.description': 'Complimentary treatment at Seoul\'s top clinics - one free procedure per person'
+    'vip.perk3.description': 'Complimentary treatment at Seoul\'s top clinics - one free procedure per group'
   },
   ko: {
     // Hero Section
@@ -284,10 +284,10 @@ export const translations = {
     'vip.subtitle': '교통만이 아닌 한국을 경험하세요',
     'vip.perk1.title': '회복 키트',
     'vip.perk1.description': '붓기차, 쿨링 안대 등 웰컴 회복 키트 무료 제공',
-    'vip.perk2.title': '대기 없는 식사',
-    'vip.perk2.description': '유명 맛집 웨이팅/예약 대행 (간장게장, 한우 오마카세)',
+    'vip.perk2.title': '한국인들만 아는 진짜 맛집',
+    'vip.perk2.description': '관광객은 절대 찾지 못하는 로컬 맛집 - 진짜 한국 맛을 경험하세요',
     'vip.perk3.title': '보톡스, 스킨레이저 무료제공',
-    'vip.perk3.description': '서울에서 가장 잘 하는 병원에서 1인 무료 시술 제공'
+    'vip.perk3.description': '서울에서 가장 잘 하는 병원에서 1그룹당 무료 시술 제공'
   },
   ja: {
     // Hero Section
@@ -423,10 +423,10 @@ export const translations = {
     'vip.subtitle': '輸送だけではなく、韓国を体験してください',
     'vip.perk1.title': '回復キット',
     'vip.perk1.description': '腫れ止めティーや冷却マスクなど、回復キットを無料で提供します',
-    'vip.perk2.title': '待ち時間なしのダイニング',
-    'vip.perk2.description': '有名レストランで待ち時間を省きます - 私たちが予約を手伝います (ガンジャンゲジャング、韓国 BBQ オマカゼ)',
+    'vip.perk2.title': 'ローカルの秘密のレストラン',
+    'vip.perk2.description': '観光客が見つけられない隠れたローカルのお気に入りへの独占アクセス - 真実の韓国料理体験',
     'vip.perk3.title': '無料ボトックス & スキンレーザー',
-    'vip.perk3.description': 'ソウルのトップクリニックで無料で提供される治療 - 1人あたり1回無料手順'
+    'vip.perk3.description': 'ソウルのトップクリニックで無料で提供される治療 - 1グループにつき1回無料施術'
   },
   zh: {
     // Hero Section
@@ -562,10 +562,10 @@ export const translations = {
     'vip.subtitle': '体验韩国不仅仅是交通',
     'vip.perk1.title': '恢复包',
     'vip.perk1.description': '免费提供欢迎恢复包，包括消肿茶、冷却眼罩等',
-    'vip.perk2.title': '无需等待用餐',
-    'vip.perk2.description': '跳过著名餐厅的排队 - 我们会处理预订（甘酱蟹、韩国烧烤套餐）',
+    'vip.perk2.title': '本地的秘密餐厅',
+    'vip.perk2.description': '对游客来说从未发现的隐藏本地名所的独家访问 - 真正的韩国餐饮体验',
     'vip.perk3.title': '免费保妥克斯 & 皮肤激光',
-    'vip.perk3.description': '首尔顶级诊所提供的免费治疗 - 每人一次免费疗程'
+    'vip.perk3.description': '首尔顶级诊所提供的免费治疗 - 每组一次免费疗程'
   },
   th: {
     // Hero Section
@@ -701,10 +701,10 @@ export const translations = {
     'vip.subtitle': 'สัมผัสประสบการณ์ที่มากกว่าการขนส่งในเกาหลี',
     'vip.perk1.title': 'ชุดฟื้นตัว',
     'vip.perk1.description': 'ชุดฟื้นตัวฟรีที่รวมถึงชาลดน้ำบวม, หน้ากากเย็น, และอื่นๆ',
-    'vip.perk2.title': 'ทานอาหารโดยไม่ต้องรอคอย',
-    'vip.perk2.description': 'ข้ามคิวที่ร้านอาหารชื่อดัง - เราจะจัดการการจอง (ганจังเกจัง, BBQ โอมาคาซี)',
+    'vip.perk2.title': 'ร้านอาหารที่ซ่อนซ่อนของคนท้องถิ่��',
+    'vip.perk2.description': 'เข้าถึงร้านอาหารที่ซ่อนซ่อนของคนท้องถิ่นที่ทัวร์นักท่องเที่ยวไม่เคยพบ - ประสบการณ์การทานอาหารที่แท้จริงของเกาหลี',
     'vip.perk3.title': 'บอโทกซ์, สกินเรย์เซอร์ฟรี',
-    'vip.perk3.description': 'รับบริการฟรีจากคลินิกที่ดีที่สุดในเซาโล่ - 1การรักษาฟรีต่อคน'
+    'vip.perk3.description': 'รับบริการฟรีจากคลินิกที่ดีที่สุดในเซาโล่ - 1 การรักษาฟรีต่อกลุ่ม'
   }
 };
 

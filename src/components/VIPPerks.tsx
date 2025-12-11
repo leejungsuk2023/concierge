@@ -13,7 +13,7 @@ export function VIPPerks() {
       gradient: 'from-pink-500 to-red-500'
     },
     {
-      image: 'https://images.unsplash.com/photo-1563372515-cf3b374cc4d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjByZXN0YXVyYW50JTIwZGluaW5nJTIwa29yZWFufGVufDF8fHx8MTc2NTM2NDQyOXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1760786885256-d74a606302e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjBsb2NhbCUyMHJlc3RhdXJhbnQlMjBhdXRoZW50aWN8ZW58MXx8fHwxNzY1NDIzNDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
       title: t('vip.perk2.title'),
       description: t('vip.perk2.description'),
       gradient: 'from-amber-500 to-orange-500'
