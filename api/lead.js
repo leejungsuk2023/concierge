@@ -1,5 +1,4 @@
 // /api/lead.js — Vercel Serverless Function for Meta CAPI
-const crypto = require('crypto');
 
 const PIXEL_ID = '1162277242762875';
 const ACCESS_TOKEN = 'EAAQmKoiUWaMBQPNKla2mzq1w3Ca1UTZBGd0jFu3JB1J2aE4PE2wuIuOII9y8L0B7S1qtZAwHEFZCHtmkWFUYyueWAy8RTo5dsYANZAkXIIq9p5mxMZAZCeDxvuZATG2QpxdX18RlMbz79GOLr40CcuV6B1jgdZC0qmZCvUFJIzL4DseC8DDzfZBKznVJIT4dIvqE0nCgZDZD';
@@ -10,24 +9,7 @@ function getClientIp(req) {
     const ip = forwarded.split(',')[0].trim();
     if (ip) return ip;
   }
-  return (req.socket && req.socket.remoteAddress) || '';
-}
-
-// Node 기본 req에서 JSON 바디 파서
-async function readJson(req) {
-  // Vercel이 이미 파싱한 경우
-  if (req.body && typeof req.body === 'object') {
-    return req.body;
-  }
-  return await new Promise((resolve, reject) => {
-    let data = '';
-    req.on('data', (c) => (data += c));
-    req.on('end', () => {
-      try { resolve(data ? JSON.parse(data) : {}); }
-      catch (e) { resolve({}); }
-    });
-    req.on('error', reject);
-  });
+  return '';
 }
 
 module.exports = async (req, res) => {
@@ -36,22 +18,23 @@ module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
+  // Preflight
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  // Health check
+  if (req.method === 'GET') {
+    return res.status(200).json({ ok: true, hint: 'POST /api/lead with JSON body' });
+  }
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ ok: false, error: 'Method Not Allowed' });
+  }
+
   try {
-    // Preflight
-    if (req.method === 'OPTIONS') {
-      return res.status(200).end();
-    }
-
-    // Health check
-    if (req.method === 'GET') {
-      return res.status(200).json({ ok: true, hint: 'POST /api/lead with JSON body' });
-    }
-
-    if (req.method !== 'POST') {
-      return res.status(405).json({ ok: false, error: 'Method Not Allowed' });
-    }
-
-    const { event_name, event_source_url, client_user_agent, fbc, fbp } = await readJson(req);
+    const body = req.body || {};
+    const { event_name, event_source_url, client_user_agent, fbc, fbp } = body;
     const clientIp = getClientIp(req);
     const ua = client_user_agent || req.headers['user-agent'] || '';
 
@@ -83,12 +66,10 @@ module.exports = async (req, res) => {
     const json = await r.json();
 
     if (!r.ok) {
-      console.error('CAPI Error:', json);
       return res.status(500).json({ ok: false, meta: json });
     }
     return res.status(200).json({ ok: true, meta: json, event_id: eventId });
   } catch (e) {
-    console.error('Function Crash:', e);
     return res.status(500).json({ ok: false, error: e.message || String(e) });
   }
 };
