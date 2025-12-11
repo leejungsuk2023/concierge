@@ -69,13 +69,12 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-4 sm:pt-6">
-            <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-[#D4AF37] hover:bg-[#C19F2F] text-[#051937] font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-base sm:text-lg">
-              {t('hero.cta.book')}
-            </button>
-            <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#051937] font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-base sm:text-lg">
-              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-              {t('hero.cta.chat')}
-            </button>
+            <div className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-transparent border-2 border-white text-white rounded-lg flex items-center justify-center">
+              <span className="text-base sm:text-lg">{t('hero.trust1')}</span>
+            </div>
+            <div className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-transparent border-2 border-white text-white rounded-lg flex items-center justify-center">
+              <span className="text-base sm:text-lg">{t('hero.trust2')}</span>
+            </div>
           </div>
         </div>
       </div>

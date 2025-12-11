@@ -20,7 +20,9 @@ export const translations = {
     'hero.badge1': 'English-Speaking Drivers',
     'hero.badge2': '24/7 Available',
     'hero.badge3': 'Certified & Professional',
-    'hero.cta.book': 'Book Now',
+    'hero.trust1': 'Trust & Comfort',
+    'hero.trust2': 'Trust & Privilege',
+    'hero.cta.book': 'Chat Now',
     'hero.cta.chat': 'Chat on WhatsApp',
 
     // Service Choice
@@ -82,7 +84,7 @@ export const translations = {
     'pricing.plan3.feature3': 'Customized Itinerary',
     'pricing.plan3.feature4': 'English-Speaking Driver',
     'pricing.plan3.feature5': 'Maximum Flexibility',
-    'pricing.button': 'Book Now',
+    'pricing.button': 'Chat Now',
     'pricing.disclaimer': '* Prices may vary based on distance, time, and specific requirements. Contact us for a customized quote tailored to your needs.',
 
     // Social Proof
@@ -159,7 +161,9 @@ export const translations = {
     'hero.badge1': '영어 가능 기사',
     'hero.badge2': '24시간 운영',
     'hero.badge3': '인증된 전문가',
-    'hero.cta.book': '예약하기',
+    'hero.trust1': '신뢰와 편안함',
+    'hero.trust2': '신뢰와 특권',
+    'hero.cta.book': '채팅하기',
     'hero.cta.chat': '왓츠앱 채팅',
 
     // Service Choice
@@ -221,7 +225,7 @@ export const translations = {
     'pricing.plan3.feature3': '맞춤형 일정',
     'pricing.plan3.feature4': '영어 가능 기사',
     'pricing.plan3.feature5': '최대 유연성',
-    'pricing.button': '예약하기',
+    'pricing.button': '채팅하기',
     'pricing.disclaimer': '* 가격은 거리, 시간 및 특정 요구 사항에 따라 달라질 수 있습니다. 맞춤형 견적은 문의하세요.',
 
     // Social Proof
@@ -298,7 +302,9 @@ export const translations = {
     'hero.badge1': '英語対応ドライバー',
     'hero.badge2': '24時間利用可能',
     'hero.badge3': '認定プロフェッショナル',
-    'hero.cta.book': '予約する',
+    'hero.trust1': '信頼と快適さ',
+    'hero.trust2': '信頼と特権',
+    'hero.cta.book': 'チャットする',
     'hero.cta.chat': 'WhatsAppでチャット',
 
     // Service Choice
@@ -360,7 +366,7 @@ export const translations = {
     'pricing.plan3.feature3': 'カスタマイズされた旅程',
     'pricing.plan3.feature4': '英語対応ドライバー',
     'pricing.plan3.feature5': '最大の柔軟性',
-    'pricing.button': '予約する',
+    'pricing.button': 'チャットする',
     'pricing.disclaimer': '* 価格は距離、時間、および特定の要件に基づいて異なる場合があります。カスタマイズされた見積もりについてはお問い合わせください。',
 
     // Social Proof
@@ -437,7 +443,9 @@ export const translations = {
     'hero.badge1': '英语司机',
     'hero.badge2': '24/7可用',
     'hero.badge3': '认证专业人员',
-    'hero.cta.book': '立即预订',
+    'hero.trust1': '信任与舒适',
+    'hero.trust2': '信任与特权',
+    'hero.cta.book': '立即聊天',
     'hero.cta.chat': 'WhatsApp聊天',
 
     // Service Choice
@@ -499,7 +507,7 @@ export const translations = {
     'pricing.plan3.feature3': '定制行程',
     'pricing.plan3.feature4': '英语司机',
     'pricing.plan3.feature5': '最大灵活性',
-    'pricing.button': '立即预订',
+    'pricing.button': '聊天现在',
     'pricing.disclaimer': '* 价格可能因距离、时间和具体要求而有所不同。联系我们获取根据您的需求定制的报价。',
 
     // Social Proof
@@ -576,7 +584,9 @@ export const translations = {
     'hero.badge1': 'คนขับพูดภาษาอังกฤษได้',
     'hero.badge2': 'บริการตลอด 24/7',
     'hero.badge3': 'ผู้เชี่ยวชาญที่ได้รับการรับรอง',
-    'hero.cta.book': 'จองเลย',
+    'hero.trust1': 'ความไว้วางใจและสบายใจ',
+    'hero.trust2': 'ความไว้วางใจและสิทธิพิเศษ',
+    'hero.cta.book': 'แชทตอนนี้',
     'hero.cta.chat': 'แชทบน WhatsApp',
 
     // Service Choice
@@ -638,7 +648,7 @@ export const translations = {
     'pricing.plan3.feature3': 'กำหนดการที่ปรับแต่งได้',
     'pricing.plan3.feature4': 'คนขับพูดภาษาอังกฤษ',
     'pricing.plan3.feature5': 'ความยืดหยุ่นสูงสุด',
-    'pricing.button': 'จองเลย',
+    'pricing.button': 'แชทตอนนี้',
     'pricing.disclaimer': '* ราคาอาจแตกต่างกันตามระยะทาง เวลา และความต้องการเฉพาะ ติดต่อเราเพื่อขอใบเสนอราคาที่ปรับแต่งตามความต้องการของคุณ',
 
     // Social Proof
@@ -701,7 +711,7 @@ export const translations = {
     'vip.subtitle': 'สัมผัสประสบการณ์ที่มากกว่าการขนส่งในเกาหลี',
     'vip.perk1.title': 'ชุดฟื้นตัว',
     'vip.perk1.description': 'ชุดฟื้นตัวฟรีที่รวมถึงชาลดน้ำบวม, หน้ากากเย็น, และอื่นๆ',
-    'vip.perk2.title': 'ร้านอาหารที่ซ่อนซ่อนของคนท้องถิ่��',
+    'vip.perk2.title': 'ร้านอาหารที่ซ่อนซ่อนของคนท้องถิ่',
     'vip.perk2.description': 'เข้าถึงร้านอาหารที่ซ่อนซ่อนของคนท้องถิ่นที่ทัวร์นักท่องเที่ยวไม่เคยพบ - ประสบการณ์การทานอาหารที่แท้จริงของเกาหลี',
     'vip.perk3.title': 'บอโทกซ์, สกินเรย์เซอร์ฟรี',
     'vip.perk3.description': 'รับบริการฟรีจากคลินิกที่ดีที่สุดในเซาโล่ - 1 การรักษาฟรีต่อกลุ่ม'
