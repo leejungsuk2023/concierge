@@ -46,7 +46,7 @@ export function FloatingChatButton() {
         </svg>
       ),
       color: 'bg-[#25D366]',
-      link: 'https://wa.me/821089175327'
+      link: 'https://wa.me/message/XJABU6MI667BH1'
     },
     {
       name: 'LINE',
