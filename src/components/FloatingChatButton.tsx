@@ -56,7 +56,7 @@ export function FloatingChatButton() {
         </svg>
       ),
       color: 'bg-[#00B900]',
-      link: 'https://line.me/ti/p/~kvviplimo'
+      link: 'https://lin.ee/qWxF5b3'
     },
     {
       name: 'KakaoTalk',
